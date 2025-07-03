@@ -52,3 +52,13 @@ b = a
 c = [1, 2, 3]
 print("Is operator:",a is b) #In operator: True
 print("Is Not operator:",a is not c) #Not In operator: True
+
+#7.Bitwise Operators (With Binary Representation)
+x=6
+y=2
+print("AND operator(&):",x&y) #AND operator(&): 2
+print("OR operator(|):",x|y) #OR operator(|): 6
+print("XOR operator(^):",x^y) #XOR operator(^): 4
+print("NOT operator(~):",~y) #NOT operator(~): -3
+print("Left shift operator(<<):",x<<y) #Left shift operator(<<): 24 
+print("Right shift operator(>>):",x>>y) #Right shift operator(>>): 1
