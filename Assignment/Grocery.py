@@ -20,23 +20,23 @@ print("Agency:{},{},{}".format(org["name"],org["contact"],org["location"]))
 print("Features:", ", ".join(f.strip() for f in features))
 
 #output
-PNR ID: 234567
-Passenger Name: sanjay
-Ticket Price (₹): 239
-Booking Type (Online/Counter): Online
-Available Tickets: 24
-Sold Tickets: 56
-Aged Discount (%): 23
-Bus Type (AC/Sleeper): Sleeper
-Bus Features (comma-separated): yes
-Travel Company: Morning star
-Contact No: 9846673837  
-Office Location: Hyderabad
+#PNR ID: 234567
+#Passenger Name: sanjay
+#Ticket Price (₹): 239
+#Booking Type (Online/Counter): Online
+#Available Tickets: 24
+#Sold Tickets: 56
+#Aged Discount (%): 23
+#Bus Type (AC/Sleeper): Sleeper
+#Bus Features (comma-separated): yes
+#Travel Company: Morning star
+#Contact No: 9846673837  
+#Office Location: Hyderabad
 
---- Booking Summary ---
-PNR,Name,Price:, 234567, sanjay, 239.0
-Aged Discount:23.00%
-Passenger:sanjay,Price:₹239.0,Type:Sleeper
-Available:24|Sold:56
-Agency:Morning star,9846673837,Hyderabad
-Features: yes
+#--- Booking Summary ---
+#PNR,Name,Price:, 234567, sanjay, 239.0
+#Aged Discount:23.00%
+#Passenger:sanjay,Price:₹239.0,Type:Sleeper
+#Available:24|Sold:56
+#Agency:Morning star,9846673837,Hyderabad
+#Features: yes
