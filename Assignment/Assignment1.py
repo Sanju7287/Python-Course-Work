@@ -1,42 +1,21 @@
-pnr=int(input("PNR ID: "))
-name=input("Passenger Name: ")
-price=float(input("Ticket Price (₹): "))
-booking=input("Booking Type (Online/Counter): ")
-stock=(int(input("Available Tickets: ")), int(input("Sold Tickets: ")))
-discount=float(input("Aged Discount (%): "))
-bus_type=input("Bus Type (AC/Sleeper): ")
-features=set(input("Bus Features (comma-separated): ").split(','))
-org={
-    "name":input("Travel Company: "),
-    "contact":input("Contact No: "),
-    "location":input("Office Location: ")
-}
+booking_id=int(input("Enter Booking ID: "))
+customer_name=input("Enter Customer Name: ")
+ticket_cost=float(input("Enter Ticket Cost: "))
+booking_channel=input("Enter Booking Channel (Online/Box Office): ")
+available_seats=int(input("Enter Number of Available Seats: "))
+booked_seats=int(input("Enter Number of Booked Seats: "))
+student_discount=float(input("Enter Discount for Students (%): "))
+movie_type=input("Enter Movie Type (2D/3D/IMAX): ")
+theatre_name=input("Enter Theatre Name: ")
+support_contact=input("Enter Support Contact Number: ")
+theatre_location=input("Enter Theatre Location: ")
 print("\n--- Booking Summary ---")
-print("PNR,Name,Price:",pnr,name,price,sep=", ")
-print("Aged Discount:%.2f%%"% discount)
-print(f"Passenger:{name},Price:₹{price},Type:{bus_type}")
-print(f"Available:{stock[0]}|Sold:{stock[1]}")
-print("Agency:{},{},{}".format(org["name"],org["contact"],org["location"]))
-print("Features:", ", ".join(f.strip() for f in features))
-
-#output
-#PNR ID: 234567
-#Passenger Name: sanjay
-#Ticket Price (₹): 239
-#Booking Type (Online/Counter): Online
-#Available Tickets: 24
-#Sold Tickets: 56
-#Aged Discount (%): 23
-#Bus Type (AC/Sleeper): Sleeper
-#Bus Features (comma-separated): yes
-#Travel Company: Morning star
-#Contact No: 9846673837  
-#Office Location: Hyderabad
-
-#--- Booking Summary ---
-#PNR,Name,Price:, 234567, sanjay, 239.0
-#Aged Discount:23.00%
-#Passenger:sanjay,Price:₹239.0,Type:Sleeper
-#Available:24|Sold:56
-#Agency:Morning star,9846673837,Hyderabad
-#Features: yes
+print(f"Booking ID:{booking_id}")
+print(f"Customer Name:{customer_name}")
+print(f"Ticket Cost:{ticket_cost}")
+print(f"Booking Channel:{booking_channel}")
+print(f"Available Seats:{available_seats}")
+print(f"Booked Seats:{booked_seats}")
+print(f"Student Discount:{student_discount}%")
+print(f"Movie Type:{movie_type}")
+print(f"Theatre:{theatre_name},Contact:{support_contact},Location:{theatre_location}")
