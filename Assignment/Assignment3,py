@@ -1,0 +1,299 @@
+def run_quiz():
+    questions = [
+        {
+            "question": "Which of these is used to define a class in Python?",
+            "options": {"a": "class", "b": "def", "c": "function", "d": "object"},
+            "answer": "a"
+        },
+        {
+            "question": "What does the 'len()' function return when applied on a string?",
+            "options": {"a": "Number of characters", "b": "ASCII sum", "c": "Number of vowels", "d": "Number of words"},
+            "answer": "a"
+        },
+        {
+            "question": "How do you start a block of code in Python?",
+            "options": {"a": "With indentation", "b": "With braces {}", "c": "With parentheses ()", "d": "With colon :"},
+            "answer": "a"
+        },
+        {
+            "question": "Which keyword is used to handle exceptions in Python?",
+            "options": {"a": "try", "b": "catch", "c": "handle", "d": "except"},
+            "answer": "d"
+        },
+        {
+            "question": "Which of the following is NOT a core data type in Python?",
+            "options": {"a": "Dictionary", "b": "Lists", "c": "Tuples", "d": "Class"},
+            "answer": "d"
+        },
+        {
+            "question": "What will be the output of 'print(2 ** 3)'?",
+            "options": {"a": "6", "b": "8", "c": "9", "d": "Error"},
+            "answer": "b"
+        },
+        {
+            "question": "What is the result of 'bool([])' in Python?",
+            "options": {"a": "True", "b": "False", "c": "Throws error", "d": "None"},
+            "answer": "b"
+        },
+        {
+            "question": "Which symbol is used to add comments in Python?",
+            "options": {"a": "//", "b": "#", "c": "<!-- -->", "d": "**"},
+            "answer": "b"
+        },
+        {
+            "question": "How do you import only the 'sqrt' function from Python's math module?",
+            "options": {"a": "from math import sqrt", "b": "import math.sqrt",
+                        "c": "import sqrt from math", "d": "from math.sqrt import *"},
+            "answer": "a"
+        },
+        {
+            "question": "Which of these data types is immutable?",
+            "options": {"a": "List", "b": "Dictionary", "c": "Tuple", "d": "Set"},
+            "answer": "c"
+        },
+        {
+            "question": "What is the correct syntax to define a function in Python?",
+            "options": {"a": "def funcName():", "b": "function funcName()",
+                        "c": "func funcName():", "d": "define funcName():"},
+            "answer": "a"
+        },
+        {
+            "question": "What data structure does a Python 'dict' correspond to?",
+            "options": {"a": "List", "b": "Key-value pairs", "c": "Set", "d": "Tuple"},
+            "answer": "b"
+        },
+        {
+            "question": "What output will 'print(3 * \"5\")' produce?",
+            "options": {"a": "15", "b": "555", "c": "Error", "d": "None"},
+            "answer": "b"
+        },
+        {
+            "question": "What does the keyword 'pass' do in Python?",
+            "options": {"a": "Starts a loop", "b": "Ends a function", "c": "Does nothing", "d": "Throws error"},
+            "answer": "c"
+        },
+        {
+            "question": "Which method can be used to convert all characters in a string to uppercase?",
+            "options": {"a": "upper()", "b": "capitalize()", "c": "title()", "d": "toupper()"},
+            "answer": "a"
+        },
+        {
+            "question": "What is the output type of 'range(5)' in Python 3?",
+            "options": {"a": "List", "b": "Range object", "c": "Tuple", "d": "Iterator"},
+            "answer": "b"
+        },
+        {
+            "question": "Which of the following will create a set in Python?",
+            "options": {"a": "{}", "b": "[]", "c": "set()", "d": "dict()"},
+            "answer": "c"
+        },
+        {
+            "question": "How do you denote a block of code within an if statement?",
+            "options": {"a": "Braces {}", "b": "Indentation", "c": "Parentheses", "d": "Square brackets"},
+            "answer": "b"
+        },
+        {
+            "question": "What does the 'with' statement do?",
+            "options": {"a": "Begins a loop", "b": "Simplifies exception handling", "c": "Manages resources", "d": "Defines a function"},
+            "answer": "c"
+        },
+        {
+            "question": "What does list comprehension do?",
+            "options": {"a": "Creates a generator", "b": "Creates a list based on existing list",
+                        "c": "Counts elements", "d": "Deletes a list"},
+            "answer": "b"
+        }
+    ]
+
+    print("🧪 Welcome to the Python Interview Prep Quiz Game!")
+    
+    score = 0
+    for idx, q in enumerate(questions, 1):
+        print(f"\nQuestion {idx}: {q['question']}")
+        for optkey, optval in sorted(q["options"].items()):
+            print(f"{optkey}) {optval}")
+        answer = input("Your answer (a/b/c/d): ").strip().lower()
+        if answer == q['answer']:
+            print("✅ Correct!")
+            score += 1
+        else:
+            correct_ans_text = q['options'][q['answer']]
+            print(f"Wrong! The correct answer is '{q['answer']}) {correct_ans_text}'")
+    
+    print(f"\nYour Final Score: {score}/{len(questions)}")
+    
+    if score == len(questions):
+        print("Perfect! You're an expert Pythonista!")
+    elif score >= len(questions) * 0.7:
+        print("Great job! Keep practicing!")
+    else:
+        print("👍 Good effort! Review and try again!")
+
+if __name__ == "__main__":
+    run_quiz()
+
+#output
+'''🧪 Welcome to the Python Interview Prep Quiz Game!
+
+Question 1: Which of these is used to define a class in Python?
+a) class
+b) def
+c) function
+d) object
+Your answer (a/b/c/d): a
+✅ Correct!
+
+Question 2: What does the 'len()' function return when applied on a string?
+a) Number of characters
+b) ASCII sum
+c) Number of vowels
+d) Number of words
+Your answer (a/b/c/d): a
+✅ Correct!
+
+Question 3: How do you start a block of code in Python?
+a) With indentation
+b) With braces {}
+c) With parentheses ()
+d) With colon :
+Your answer (a/b/c/d): a
+✅ Correct!
+
+Question 4: Which keyword is used to handle exceptions in Python?
+a) try
+b) catch
+c) handle
+d) except
+Your answer (a/b/c/d): c
+Wrong! The correct answer is 'd) except'
+
+Question 5: Which of the following is NOT a core data type in Python?
+a) Dictionary
+b) Lists
+c) Tuples
+d) Class
+Your answer (a/b/c/d): b
+Wrong! The correct answer is 'd) Class'
+
+Question 6: What will be the output of 'print(2 ** 3)'?
+a) 6
+b) 8
+c) 9
+d) Error
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 7: What is the result of 'bool([])' in Python?
+a) True
+b) False
+c) Throws error
+d) None
+Your answer (a/b/c/d): c
+Wrong! The correct answer is 'b) False'
+
+Question 8: Which symbol is used to add comments in Python?
+a) //
+b) #
+c) <!-- -->
+d) **
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 9: How do you import only the 'sqrt' function from Python's math module?
+a) from math import sqrt
+b) import math.sqrt
+c) import sqrt from math
+d) from math.sqrt import *
+Your answer (a/b/c/d): a
+✅ Correct!
+
+Question 10: Which of these data types is immutable?
+a) List
+b) Dictionary
+c) Tuple
+d) Set
+Your answer (a/b/c/d): c
+✅ Correct!
+
+Question 11: What is the correct syntax to define a function in Python?
+a) def funcName():
+b) function funcName()
+c) func funcName():
+d) define funcName():
+Your answer (a/b/c/d): d
+Wrong! The correct answer is 'a) def funcName():'
+
+Question 12: What data structure does a Python 'dict' correspond to?
+a) List
+b) Key-value pairs
+c) Set
+d) Tuple
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 13: What output will 'print(3 * "5")' produce?
+a) 15
+b) 555
+c) Error
+d) None
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 14: What does the keyword 'pass' do in Python?
+a) Starts a loop
+b) Ends a function
+c) Does nothing
+d) Throws error
+Your answer (a/b/c/d): c
+✅ Correct!
+
+Question 15: Which method can be used to convert all characters in a string to uppercase?
+a) upper()
+b) capitalize()
+c) title()
+d) toupper()
+Your answer (a/b/c/d): a
+✅ Correct!
+
+Question 16: What is the output type of 'range(5)' in Python 3?
+a) List
+b) Range object
+c) Tuple
+d) Iterator
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 17: Which of the following will create a set in Python?
+a) {}
+b) []
+c) set()
+d) dict()
+Your answer (a/b/c/d): c
+✅ Correct!
+
+Question 18: How do you denote a block of code within an if statement?
+a) Braces {}
+b) Indentation
+c) Parentheses
+d) Square brackets
+Your answer (a/b/c/d): b
+✅ Correct!
+
+Question 19: What does the 'with' statement do?
+a) Begins a loop
+b) Simplifies exception handling
+c) Manages resources
+d) Defines a function
+Your answer (a/b/c/d): c
+✅ Correct!
+
+Question 20: What does list comprehension do?
+a) Creates a generator
+b) Creates a list based on existing list
+c) Counts elements
+d) Deletes a list
+Your answer (a/b/c/d): c
+Wrong! The correct answer is 'b) Creates a list based on existing list'
+
+Your Final Score: 15/20
+Great job! Keep practicing!'''
