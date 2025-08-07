@@ -5,7 +5,7 @@ import sys
 print(sys.argv)
 print(sys.path)
 print(sys.version)
-print(sys.exit())'''
+print(sys.exit())
 
 import math
 print(math.sqrt(6))
@@ -31,3 +31,28 @@ print(random.choice(names))
 print(random.choices(names,k=4))
 print(random.shuffle(names))
 print(random.seed(19))
+
+import collections
+w='python program java program html file css file'.split()
+d=collections.Counter(w)
+print(d)
+s='python programming'
+d=collections.defaultdict(int)
+for i in s:
+    d[i]+=1
+print(d)
+
+from collections import deque
+l=deque()
+l.appendleft(12)
+l.appendleft(1)
+l.pop()
+l.appendleft(23)
+l.appendleft(15)
+l.pop()
+l.pop()
+print(l)'''
+
+from itertools import combinations,permutations
+print(list(combinations('ABCD',2)))
+print(list(permutations('ABCD',4)))
